@@ -35,12 +35,8 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "react-button-component": "^1.0.0",
-<<<<<<< HEAD
     "react-script": "^2.0.5",
     "react-scripts": "^2.0.5",
     "sequelize": "^4.41.1"
-=======
-    "sequelize": "^4.38.0"
->>>>>>> eb647db7ddad45dacc0970f0e0abde1c7dfee1ea
   }
 }
