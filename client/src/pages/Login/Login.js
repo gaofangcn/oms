@@ -46,14 +46,12 @@ export default class Login extends Component {
     console.log(userInput);
     API.postingLoginData(userInput)
       .then(res => {
-        console.log(res);
-        if (res.data !== null) {
-          sessionStorage.name = res.data.firstName;
-          window.location.href = "/oms";
-        } else {
-          console.log(`does not work`);
+        console.log(res.data)
+        if(res.data){
+          window.location.href = '/oms'          
+        }else{
+          console.log("error")
         }
-        // console.log(res.data);
       })
       .catch(err => console.log(err));
   };

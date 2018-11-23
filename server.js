@@ -9,7 +9,6 @@ var db = require("./models");
 
 const passport = require('passport');
 const passportConfig = require('./config/passport');
-const keys = require('./routes/api/keys/keys')
 var session = require('express-session')
 
 app.use(session({

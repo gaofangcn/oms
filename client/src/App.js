@@ -12,7 +12,6 @@ import Login from "./pages/Login"
   //       .catch(err => console.log(err));
   // }
 
-  
 const App = () => (
   <Router>
     <div>
