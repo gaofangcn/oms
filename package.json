@@ -9,7 +9,7 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
-    "install": "cd client && npm install",
+    "install": "cd client && npm install && npm run build && cd ..",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
@@ -17,7 +17,8 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "react-scripts": "^2.0.5"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -34,8 +35,12 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "react-button-component": "^1.0.0",
+<<<<<<< HEAD
     "react-script": "^2.0.5",
     "react-scripts": "^2.0.5",
     "sequelize": "^4.41.1"
+=======
+    "sequelize": "^4.38.0"
+>>>>>>> eb647db7ddad45dacc0970f0e0abde1c7dfee1ea
   }
 }
