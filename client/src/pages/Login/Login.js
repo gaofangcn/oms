@@ -3,6 +3,7 @@ import React, { Component } from "react";
 // import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import LoginBtn from "../../components/LoginBtn";
+import GuestBtn from "../../components/GuestBtn";
 import "./Login.css";
 import logo from "./img/barometer.png";
 import Axios from "axios";
@@ -38,17 +39,38 @@ export default class Login extends Component {
     event.preventDefault();
   };
 
-  handleLogin = () => {
+  handleGuestLogin = () => {
     const userInput = {
-      userName: this.state.userName,
-      password: this.state.password
-    };
+      userName: "guest",
+      password: "guest"
+    }
     console.log(userInput);
     API.postingLoginData(userInput)
       .then(res => {
         console.log(res.data)
         if(res.data){
-          // sessionStorage.name = res.data.firstName;
+          sessionStorage.name = res.data.firstName;
+          this.props.history.push('/oms');;         
+        }else{
+          console.log("error")
+        }
+      })
+      .catch(err => console.log(err));
+  }
+
+  handleLogin = () => {
+    const userInput = {
+      userName: this.state.userName,
+      password: this.state.password
+    };
+  
+
+    console.log(userInput);
+    API.postingLoginData(userInput)
+      .then(res => {
+        console.log(res.data)
+        if(res.data){
+          sessionStorage.name = res.data.firstName;
           this.props.history.push('/oms');;         
         }else{
           console.log("error")
@@ -89,9 +111,14 @@ export default class Login extends Component {
               />
              
             </div>
-            <div className = "loginbutton">
-            <LoginBtn onClick={this.handleLogin} type="submit" />
-          </div>
+            <div className = "row">
+                <div className = "col loginbutton">
+                  <GuestBtn onClick={this.handleGuestLogin} type="submit"/> 
+                </div>
+                <div className = "col loginbutton">
+                <LoginBtn onClick={this.handleLogin} type="submit" />
+                </div>
+            </div>
           </div>
         </form>
       </div>
