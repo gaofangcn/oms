@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3001;
 var db = require("./models");
 // Define middleware here
 
-const passport = require('passport');
+var passport = require('passport');
 const passportConfig = require('./config/passport');
 var session = require('express-session')
 
