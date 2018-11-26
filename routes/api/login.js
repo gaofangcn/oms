@@ -2,7 +2,7 @@ var db = require("../../models");
 const passport = require('passport');
 // const axios = require("axios");
 // const router = require("express").Router();
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 
 module.exports = function(app) {
 

@@ -48,8 +48,9 @@ export default class Login extends Component {
     API.postingLoginData(userInput)
       .then(res => {
         console.log(res.data)
+        console.log("there is a change")
         if(res.data){
-          sessionStorage.name = res.data.firstName;
+          // sessionStorage.name = res.data.firstName;
           this.props.history.push('/oms');;         
         }else{
           console.log("error")
@@ -70,7 +71,7 @@ export default class Login extends Component {
       .then(res => {
         console.log(res.data)
         if(res.data){
-          sessionStorage.name = res.data.firstName;
+          // sessionStorage.name = res.data.firstName;
           this.props.history.push('/oms');;         
         }else{
           console.log("error")
