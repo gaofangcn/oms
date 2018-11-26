@@ -533,7 +533,7 @@ else{
           
           <div className="buttonsdiv">
           
-           <ThemeButton/>
+           {/* <ThemeButton/> */}
 
            <SaveBtn handleStageSubmit={this.handleStageSubmit} />
 
@@ -733,7 +733,8 @@ else{
           ) : (
             <h2>No Trades Ordered</h2>
           )}
-          <SendButton/></div> 
+          {/* <SendButton/> */}
+          </div> 
         </div>
           {/*======================================================= table 3 =======================================*/}
 
